@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather and DHT11 Sensor Data</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Weather Section -->
+  <div class="container">
+    <h1>Weather & DHT11 Sensor Dashboard</h1>
+
+    <!-- City Input for Weather -->
+    <div class="input-container">
+      <input type="text" id="city-input" placeholder="Enter a city..." />
+      <button id="fetch-weather">Get Weather</button>
+    </div>
+
+    <!-- Weather Details Section -->
+    <div id="weather-container" class="weather-container">
+      <h2>Weather Information</h2>
+      <div id="loading" class="loading">Loading...</div>
+      <div class="weather-details" id="weather-details">
+        <p><strong>City:</strong> <span id="city"></span></p>
+        <p><strong>Temperature:</strong> <span id="temperature"></span> °C</p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Weather:</strong> <span id="weather-description"></span></p>
+      </div>
+      <div id="weather-error" class="error"></div>
+    </div>
+
+    <!-- DHT11 Sensor Data Section -->
+    <div class="sensor-container">
+      <h2>DHT11 Sensor Data</h2>
+      <div class="sensor-details">
+        <p><strong>Temperature:</strong> <span id="sensor-temp"></span> °C</p>
+        <p><strong>Humidity:</strong> <span id="sensor-humidity"></span>%</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
